@@ -285,7 +285,7 @@ class Pet(object):
             if service.startswith('cloudantNoSQLDB'):
                 cloudant_service = vcap_services[service][0]
                 opts['username'] = cloudant_service['credentials']['username']
-                opts['password'] = cloudant_service['credentials']['password']
+                opts['password'] = cloudant_service['credentials']['apikey']
                 opts['host'] = cloudant_service['credentials']['host']
                 opts['port'] = cloudant_service['credentials']['port']
                 opts['url'] = cloudant_service['credentials']['url']

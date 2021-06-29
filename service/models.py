@@ -284,7 +284,7 @@ class Pet(object):
         for service in vcap_services:
             if service.startswith('cloudantNoSQLDB'):
                 cloudant_service = vcap_services[service][0]
-                logger.info(cloudant_service)
+                Pet.logger.info(cloudant_service)
                 opts['username'] = cloudant_service['credentials']['username']
                 opts['password'] = cloudant_service['credentials']['apikey']
                 opts['host'] = cloudant_service['credentials']['host']

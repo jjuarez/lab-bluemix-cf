@@ -288,8 +288,7 @@ class Pet(object):
                 opts['username'] = cloudant_service['credentials']['username']
                 opts['password'] = cloudant_service['credentials']['apikey']
                 opts['host'] = cloudant_service['credentials']['host']
-                opts['port'] = cloudant_service['credentials']['port'] | "443"
-                opts['url'] = cloudant_service['credentials']['url']
+                opts['port'] = cloudant_service['credentials']['port']
 
         if any(k not in opts for k in ('host', 'username', 'password', 'port', 'url')):
             Pet.logger.info('Error - Failed to retrieve options. ' \
